@@ -25,18 +25,10 @@ def build_heap(data):
     return swaps
 
 def main():
-    n = int(input())
-    data = list(map(int, input().split()))
-    assert len(data) == n
-    swaps = build_heap(data)
-    print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
-    
     cmd = input()
     if "F" in cmd:
         file_path = input()
-        path = "test/"+file_path
+        path = "tests/"+file_path
         
         text = open(path)
         text1 = text.read()
