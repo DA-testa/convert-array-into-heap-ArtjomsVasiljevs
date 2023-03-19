@@ -1,5 +1,5 @@
 # python3
-
+#221RDB330 Artjoms Vasiļjevs 17.grupa
 def build_heap(data):
     swaps = []
     for i in range(len(data)//2, -1, -1):
