@@ -32,5 +32,34 @@ def main():
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
+    
+    cmd = input()
+    if "F" in cmd:
+        file_path = input()
+        path = "test/"+file_path
+        
+        text = open(path)
+        text1 = text.read()
+        text.close()
+        sep = text1.partition("\n")
+        n = int(sep[0])
+        data = sep[2].split(" ")
+        assert len(data) == n
+        swaps = build_heap(data)
+        print(len(swaps))
+        for i, j in swaps:
+            print(i, j)
+            
+            
+            
+    elif "I" in cmd:
+        n = int(input())
+        data = list(map(int, input().split()))
+        assert len(data) == n
+        swaps = build_heap(data)
+        print(len(swaps))
+        for i, j in swaps:
+            print(i, j)
+
 if __name__ == "__main__":
     main()
